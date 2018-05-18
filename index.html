@@ -1,1 +1,22 @@
-Здраво свијете!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Igor Đukić</title>
+</head>
+<body>
+
+</body>
+<script>
+    function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send(null);
+        alert(xmlHttp.responseText);
+        return xmlHttp.responseText;
+    }
+    httpGet('http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22');
+</script>
+</html>
