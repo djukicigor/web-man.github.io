@@ -1,0 +1,28 @@
+{
+  "name": "web-man.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-man/web-man.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-man/web-man.github.io/issues"
+  },
+  "homepage": "https://github.com/web-man/web-man.github.io#readme",
+  "dependencies": {
+    "gatsby": "^2.15.34",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
