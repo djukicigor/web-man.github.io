@@ -41,7 +41,6 @@ header h1 span {
 }
 
 main {
-  width: 940px;
   margin: 0 auto;
   flex-grow: 2;
   display: flex;
@@ -61,7 +60,7 @@ main {
 
 #body h2 {
   display: inline-block;
-  font-size: 26px;
+  font-size: 36px;
   margin-bottom: 40px;
   margin-top: 0;
   color: var(--grey);
@@ -120,7 +119,6 @@ main {
 }
 
 footer {
-  width: 940px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -152,3 +150,41 @@ footer {
   75% { opacity: 0; }
   100% { opacity: 0; }
  }
+
+
+@media screen and (min-width: 960px) {
+  main, footer {
+    width: 940px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  main {
+    padding: 0 5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #body p {
+    font-size: 20px;
+  }
+
+  #body h2 {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .mail-button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .copyright-text p {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+}

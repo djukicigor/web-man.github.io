@@ -100,7 +100,7 @@ function typeText(textObj) {
       let initialKey = key;
       key = key.slice(0, -1);
       if (key === 'heading') {
-        node = document.createElement("h1");
+        node = document.createElement("h2");
         document.getElementById("body").appendChild(node);
         document.getElementById("body").appendChild(document.createElement("br"));
       } else if (key === 'paragraph') {
