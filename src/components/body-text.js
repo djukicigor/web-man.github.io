@@ -45,7 +45,7 @@ let textObj = {
     text0: 'I am a software developer living in ',
     link0: {
       text0: 'Belgrade, Serbia',
-      href0: 'www.google.com'
+      href0: 'https://www.google.com/maps/place/Belgrade/@44.8180058,20.3672225,11.3z/data=!4m5!3m4!1s0x475a7aa3d7b53fbd:0x1db8645cf2177ee4!8m2!3d44.786568!4d20.4489216'
     },
     text1: '.'
   },
@@ -53,12 +53,12 @@ let textObj = {
     text0: 'I build web applications using popular technologies like ',
     link0: {
       text0: 'Node.js ',
-      href0: 'www.facebook.com',
+      href0: 'https://nodejs.org/en/about/',
     },
     text1: 'and ',
     link1: {
       text0: 'Ruby on Rails',
-      href0: 'www.facebook.com',
+      href0: 'https://rubyonrails.org/',
     },
     text2: '.'
   },
@@ -66,19 +66,27 @@ let textObj = {
     text0: 'Can even create a SPA application using ',
     link0: {
       text0: 'React',
-      href0: 'www.facebook.com',
+      href0: 'https://reactjs.org/',
     },
     text1: '/',
     link1: {
       text0: 'Angular',
-      href0: 'www.facebook.com',
+      href0: 'https://angular.io/',
     },
     text2: '/',
     link2: {
-      text0: 'Vue',
-      href0: 'www.facebook.com',
+      text0: 'Ember',
+      href0: 'https://emberjs.com/',
     },
-    text3: '. If you have any ideas or problems I am willing to hear.',
+    text3: '/',
+    link3: {
+      text0: 'Vue',
+      href0: 'https://vuejs.org/',
+    },
+    text4: '.',
+  },
+  paragraph3: {
+    text0: 'If you have any ideas or problems I am willing to hear.'
   },
   span0: {
     text0: ''
@@ -103,13 +111,14 @@ function typeText(textObj) {
       } else if (key === 'link') {
         node = document.createElement("a");
         node.setAttribute('href', value.href0)
+        node.setAttribute('target', '_blank')
         animArr.push(textAnimation.bind(null, parent, node))
       } else if (key === 'text' && parent) {
         animArr.push(textAnimation.bind(null, parent, value))
       } else if (key === 'span') {
         node = document.createElement("span");
         node.classList.add('link')
-        animArr.push(textAnimation.bind(null, document.getElementsByClassName('paragraph2')[0], node)) 
+        animArr.push(textAnimation.bind(null, document.getElementsByClassName('paragraph3')[0], node)) 
       }
   
       if (typeof value === 'object') {
