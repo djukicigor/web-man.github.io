@@ -22,7 +22,6 @@ function textAnimation(node, txt) {
       res()
     } else {
       (function typeWriter() {
-        console.log(node)
         if (i < txt.length) {
           node.innerHTML += txt.charAt(i);
           i++
