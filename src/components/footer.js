@@ -8,7 +8,7 @@ export default () => (
       <a href="https://twitter.com/prodevl" target="_blank"><img src="../../twitter.svg" /></a>
     </div>
     <div className="copyright-text">
-      <p>Copyright Igor Đukić 2019  ©</p>
+      <p>Copyright Igor Đukić {new Date().getFullYear()}  ©</p>
     </div>
   </footer>
 )
